@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Health & Beauty Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="Style.css">
+</head>
+<div id="header">
+    <a href="Home.html"><img src="Images/HealthfulCoreLogo.png" class="logo" alt=""></a>
+
+    <div>
+        <ul id="navigationBar">
+            <li><a class="active" href="Home.html">Home</a></li>
+            <li>
+                <a href="Shop.html">Shop</a>
+                <div class="dropdowncontainer">
+                    <ul class="dropdown">
+                        <li><a href="Shop.html#VitaminsAndSupplimentsSection">Vitamins and Suppliment</a></li>
+                        <li><a href="Shop.html#FoodAndDrinkSection">Food & Drink</a></li>
+                        <li><a href="Shop.html#SportNutritionSection">Sport Nutrition</a></li>
+                        <li><a href="Shop.html#BeautySection">Beauty</a></li>
+                        <li><a href="Shop.html#WellnessNeedsSection">Wellness Needs</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><button id="signingOutButton">Sign Out</button></li>
+            <li><a href="ShoppingCart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+
+        </ul>
+    </div>
+
+</div>
+
+<div id="BannerSection">
+    <h1>Welcome <br> to <br>Healthful <br> Core</h1>
+</div>
+
+<body>
+    <div class="checkoutTitle">Checkout</div>
+    <div class="TotalTitle">Total: £<span id="shoppingBasketTotal"></span></div>
+
+    <form class="paymentForm">
+        <div for="name">Name:</div>
+        <input type="text" id="name" name="name" required><br>
+
+        <div for="cardnumber">Credit Card Number:</div>
+        <input type="text" id="cardnumber" name="cardnumber" required><br>
+
+        <div for="expiration">Expiration Date (MM/YY):</div>
+        <input type="text" id="expiration" name="expiration" required><br>
+
+        <div for="cvv">CVV:</div>
+        <input type="text" id="cvv" name="cvv" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="PayfooterContainer">
+        <footer class="footer">
+            <div class="SocialMediaLogoContainer">
+                <a href="https://www.instagram.com"><img src="./Images/instagramLogo.png" class="SocialMediaLogo"></a>
+                <a href="https://en-gb.facebook.com"><img src="./Images/FacebookLogo.png" class="SocialMediaLogo"></a>
+                <a href="https://twitter.com/?lang=en"><img src="./Images/TwitterLogo.png" class="SocialMediaLogo"></a>
+            </div>
+            <div id="copyright">Healthful Core @ Copyright</div>
+        </footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+    <script src="Script2.js"></script>
+
+</body>
+
+
+</html>

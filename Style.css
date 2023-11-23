@@ -1,0 +1,1382 @@
+/* Register and sign in form */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.FormContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    width: 400px;
+    border-radius: 5px;
+    background-color: #088178;
+    height: 400px;
+    align-items: center;
+}
+
+.Title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+}
+
+label {
+    display: block;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 8px 0px 5px 50px;
+    color: white;
+}
+
+input {
+    width: 70%;
+    margin-top: 20px;
+    ;
+    margin-bottom: 25px;
+    margin-left: 50px;
+    padding: 8px 5px;
+    border-radius: 5px;
+
+}
+
+.ButtonContainer {
+    margin-left: 150px;
+
+}
+
+#submitButton {
+    background-color: white;
+    width: 40%;
+    padding: 10px 8px;
+    color: black;
+    font-weight: bolder;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: solid;
+    border-radius: 5px;
+}
+
+.HaveAccountContainer {
+    float: left;
+    padding: 10px;
+    margin-top: 20px;
+
+}
+
+.AlreadyHaveAccountTitle {
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 40px;
+
+}
+
+a {
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* Home Page */
+
+.logo {
+    width: 12%;
+    height: 12%;
+    min-width: 12%;
+    min-height: 12%;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px, 80px;
+    background: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navigationBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navigationBar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navigationBar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.2s ease;
+}
+
+#navigationBar li a:hover,
+#navigationBar li a.active {
+    color: #088178;
+}
+
+
+/* Dropdown Menu for Shop */
+.dropdown {
+    position: absolute;
+    display: none;
+    width: 290px;
+    background-color: #E3E6F3;
+    padding: 5px;
+}
+
+.dropdown li,
+.dropdown li a {
+    height: 25px;
+    align-content: center;
+    margin-top: 6px;
+}
+
+.dropdown li:hover {
+    padding: 12px;
+    border-radius: 6px;
+}
+
+/* Show the dropdown menu when the shop menu is hovered */
+li:hover .dropdown {
+    display: block;
+    padding: 5px;
+    border-style: solid;
+    border-color: #088178;
+    border-radius: 6px;
+    border-width: 2.5px;
+}
+
+#BannerSection {
+    width: 100%;
+    height: 90vh;
+    background-image: url(Images/HomePageBanner.png);
+    background-size: cover;
+    background-position: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#BannerSection h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    color: #088178;
+    text-align: center;
+    margin-left: 73%;
+}
+
+#categoriesTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    float: center;
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-top: #088178 6px;
+    border-bottom: #088178 6px;
+    border-left: white;
+    border-right: white;
+    border-style: solid;
+}
+
+#signingOutButton {
+    list-style: none;
+    position: relative;
+    font-weight: bold;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: none;
+    float: center;
+    width: 90px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.4s ease;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+/* two images for homepage */
+.twoImageInformationOne {
+    width: 600px;
+    height: 380px;
+    padding-top: 20px;
+    margin-left: 12px;
+    display: flex;
+    padding-right: 23px;
+    margin-top: 20px;
+}
+
+.twoImageInformationTwo {
+    width: 600px;
+    height: 380px;
+    padding-bottom: 20px;
+    display: flex;
+    margin-left: 629px;
+    margin-top: -450px;
+}
+
+.firstFeatureTitleContainer1 {
+    display: inline-block;
+}
+
+.firstFeatureTitleOne {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    float: left;
+    padding-left: 200px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-decoration: #1a1a1a;
+}
+
+.firstFeatureTitleContainer2 {
+    margin-left: 400px;
+    margin-top: -20px;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+.firstFeatureTitleOne a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.firstFeatureTitleTwo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    float: left;
+    padding-left: 460px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.firstFeatureTitleTwo a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.firstFeature {
+    object-fit: contain;
+}
+
+.firstFeatureDescriptionOneContainer {
+    float: left;
+    text-align: center;
+}
+
+
+/* three images for homepage */
+.threeImageInformationOne {
+    width: 410px;
+    height: 246px;
+    padding-right: 20px;
+    margin-left: 10px;
+}
+
+.threeImageInformationTwo {
+    width: 410px;
+    height: 246px;
+    padding-right: 10px;
+    margin-left: 132px;
+    margin-top: -248px;
+    float: left;
+}
+
+.threeImageInformationThree {
+    width: 32%;
+    height: 244px;
+    padding-left: 10px;
+    margin-left: 844px;
+    margin-top: -600px;
+    margin-bottom: 55px;
+}
+
+.SecondFeature {
+    object-fit: contain;
+    padding-top: 100px;
+}
+
+.SecondFeatureTitleOne {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    float: left;
+    margin-left: 130px;
+    padding-top: 10px;
+}
+
+.SecondFeatureTitleOne a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.SecondFeatureTitleTwo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    float: left;
+    margin-left: 300px;
+    padding-top: 10px;
+}
+
+.SecondFeatureTitleTwo a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.SecondFeatureTitleThree {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    float: left;
+    position: flex;
+    margin-left: 960px;
+    margin-top: -55px;
+    padding-top: 10px;
+}
+
+.SecondFeatureTitleThree a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.SocialMediaLogoContainer {
+    margin-left: 35%;
+}
+
+.SocialMediaLogo {
+    width: 40px;
+    height: 40px;
+    margin-right: 15%;
+    margin-top: 5%;
+}
+
+/* shop page */
+.ShoppingCartButton {
+    padding-top: 30px;
+}
+
+.cartButton {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    background-color: #088178;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #088178;
+    align-content: center;
+    padding-left: 36.8%;
+    padding-right: 36.8%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-weight: bold;
+    color: #E3E6F3;
+    cursor: pointer;
+}
+
+/* Individual Product Page */
+.productContainer1 {
+    margin-left: 47px;
+}
+
+.productHeader {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: x-large;
+    text-align: left;
+    justify-content: left;
+    margin-bottom: 40px;
+}
+
+.productContainer2 {
+    width: 350px;
+    height: 350px;
+    max-width: 30%;
+    float: left;
+    background-color: #ededed;
+    margin-right: 50px;
+    margin-bottom: 7%;
+}
+
+.product {
+    width: 100%;
+    height: 100%;
+}
+
+.productImage {
+    width: 250px;
+    height: 280px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+
+.productTitle {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.productTitle a {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: none;
+    text-decoration-color: #1a1a1a;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.productTitle a:visited {
+    color: #1a1a1a;
+}
+
+
+.productTitle a:link {
+    color: #1a1a1a;
+}
+
+.productPrice {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: 900;
+
+}
+
+.ProductTitleContainer {
+    margin-left: 29%;
+}
+
+.ProductTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 900;
+    text-align: left;
+    margin-left: 29.5%;
+    margin-right: 15%;
+    padding-bottom: 30px;
+    margin-top: 10%;
+}
+
+.productDescriptionImage {
+    width: 35%;
+    height: 35%;
+    padding: 2%;
+    margin-top: -8%;
+    margin-left: 5%;
+}
+
+.ProductDescriptionInfo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    padding-right: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-left: 50%;
+    margin-right: 8%;
+    text-align: left;
+    margin-top: -340px;
+}
+
+.basketButton {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    background-color: #088178;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 6px;
+    border-color: #088178;
+    margin-left: 50%;
+    width: 40%;
+    font-weight: lighter;
+    color: white;
+    cursor: pointer;
+}
+
+.productPrice2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    margin-left: 50%;
+    margin-top: -2%
+}
+
+/* About Page */
+#EstablishedTitleContainer {
+    border-color: #088178;
+    border-style: solid;
+    border-radius: 30px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 10px;
+    margin-top: 10%;
+}
+
+#EstablishedTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 26px;
+}
+
+.AboutUsDescriptionContainer {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+    padding-bottom: 5%;
+}
+
+.AboutUsDescription {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    text-align: center;
+}
+
+#PropositionTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.UpArrowAbout {
+    display: block;
+    margin: auto;
+    margin-top: 10%;
+    width: 50px;
+}
+
+.footer {
+    background-color: #E3E6F3;
+    color: black;
+    text-align: center;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: absolute;
+    width: auto;
+    height: 150px;
+}
+
+.shopFooter {
+    background-color: #E3E6F3;
+    color: black;
+    text-align: center;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: absolute;
+    width: auto;
+    height: 150px;
+    margin-top: 900px;
+}
+
+.SocialMediaLogoContainer {
+    display: absolute;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 30px;
+}
+
+.SocialMediaLogo {
+    width: 40px;
+    height: 40px;
+    margin: 25px 20px;
+}
+
+#copyright {
+    font-size: 20px;
+
+}
+
+.UpArrowAbout {
+    margin-top: 3%;
+    margin-left: 92%;
+
+}
+
+/* Contact Page  */
+#header2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 50px;
+    border-top: #088178 6px;
+    border-bottom: #088178 6px;
+    border-left: white;
+    border-right: white;
+    border-style: solid;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#locationInformation {
+    text-align: center;
+    background-color: #088178;
+    padding: 2%;
+    margin-left: 6%;
+    float: left;
+    width: 250px;
+    height: 350px;
+}
+
+#LocationTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: Bolder;
+}
+
+.Address {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#ContactNumberContainer {
+    background-color: #088178;
+    width: 243px;
+    height: 350px;
+    align-items: center;
+    text-align: center;
+    margin-left: 38%;
+    margin-top: 7%;
+    justify-content: center;
+    padding: 2%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.ContactNumber1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    padding: 5%;
+}
+
+#EmailContainer {
+    background-color: #088178;
+    width: 243px;
+    height: 350px;
+    align-items: center;
+    text-align: center;
+    margin-left: 70%;
+    margin-top: -28%;
+    justify-content: center;
+    padding: 2%;
+    float: left;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#ContactFormContainer {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#ContactForm {
+    background-color: bisque;
+    width: 70%;
+    height: 400px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    padding: 20px;
+}
+
+.contactFormTitle {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 20px;
+}
+
+#ContactHeadings1,
+#ContactHeadings2 {
+    width: 200px;
+    margin-left: 50px;
+}
+
+#ContactHeadings3 {
+    position: relative;
+    margin-top: -188px;
+    margin-left: 400px;
+    width: 200px;
+}
+
+.ContactFormInputs1 {
+    width: 300px;
+    height: 28px;
+}
+
+.ContactFormInputs {
+    width: 400px;
+    height: 140px;
+    margin-bottom: 10px;
+    margin-left: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: absolute;
+}
+
+#SubmitButton {
+    width: 120px;
+    height: 45px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-left: 360px;
+    margin-top: 200px;
+}
+
+.ContactfooterContainer {
+    padding-top: 50px;
+}
+
+/* shopping backet page */
+.cartContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.shoppingBasketTitle {
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cart {
+    width: 600px;
+    height: auto;
+    min-height: 400px;
+    background-color: antiquewhite;
+    position: flex;
+    justify-self: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 30px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: antiquewhite;
+}
+
+#cart-items {
+    padding: 20px;
+}
+
+.ShoppingBasketTotalTitle {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.ShoppingBasketTotalTitleContainer {
+    padding: 20px;
+
+}
+
+.checkoutButton {
+
+    background-color: #088178;
+    border: solid;
+    border-radius: 6px;
+    border-color: #088178;
+    color: white;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.productLinkContainer {
+    padding: 20px;
+    text-decoration: none;
+}
+
+/* Payment Page */
+.checkoutTitle {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.TotalTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 320px;
+}
+
+.paymentForm {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background-color: antiquewhite;
+    height: 640px;
+}
+
+.paymentForm div {
+    margin-top: 20px;
+    margin-left: 200px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.paymentForm input {
+    width: 60%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    margin-left: 200px;
+}
+
+.paymentForm button[type="submit"] {
+    background-color: #088178;
+    color: white;
+    border: solid;
+    border-radius: 6px;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-left: 450px;
+}
+
+.PayfooterContainer {
+    padding-top: 50px;
+}
+
+/* successful payment page */
+.SuccessfulContainerOutter {
+    display: flex;
+    justify-content: center;
+    margin-top: 125px;
+
+}
+
+.SuccessfulContainer {
+    background-color: #088178;
+    border-style: solid;
+    border-radius: 5px;
+    width: 400px;
+    height: 350px;
+    border-color: #088178;
+    align-items: center;
+    justify-items: center;
+
+}
+
+#paymentSuccessfulTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    font-weight: 100;
+    text-align: center;
+    padding-bottom: 20px;
+    color: black;
+    padding-top: 20px;
+}
+
+.paymentRecievedMessage {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 25px;
+    color: white;
+}
+
+.ContinueShoppingButtonContainer {
+    text-align: center;
+    justify-items: center;
+    padding-top: 80px;
+}
+
+#ContinueShoppingButton {
+    background-color: #088178;
+    display: absolute;
+    text-decoration: none;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: black;
+    width: 300px;
+    height: 25px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: black;
+    background-color: #E3E6F3;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* ArrowButton */
+.UpArrowHome {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 93%;
+}
+
+.UpArrowShop {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-top: 71%;
+    margin-left: -10%;
+
+}
+
+.UpArrowAbout {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 92%;
+
+}
+
+.UpArrowContacts {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-top: 6%;
+    margin-left: 90%;
+}
+
+/* Media Queries - amking website dynamic*/
+@media screen and (max-width: 770px),
+screen and (max-width: 440px),
+screen and (max-width: 900px) {
+    #navigationBar {
+        float: right;
+        list-style: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #navigationBar li {
+        display: inline-block;
+        position: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: -50px;
+    }
+
+    /* Dropdown Menu for Shop */
+    .dropdown {
+        position: absolute;
+        display: none;
+        width: 240px;
+        background-color: #E3E6F3;
+        height: 180px;
+        margin-top: 3px;
+    }
+
+    .dropdown li,
+    .dropdown li a {
+        height: 30px;
+        align-content: center;
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+
+    /* Show the dropdown menu when the shop menu is hovered */
+    li:hover .dropdown {
+        display: inline-table;
+        border-style: solid;
+        border-color: #088178;
+        border-radius: 5%;
+        margin-right: -20px;
+        font-size: 10px;
+    }
+
+    /* home page */
+     /* two images for homepage */
+     .twoImageInformationOne {
+        width: 95%;
+        height: 95%;
+        padding-top: 20px;
+        margin-left: 20px;
+        display: flex;
+        padding-right: 23px;
+        margin-top: 20px;
+    }
+
+    .twoImageInformationTwo {
+        width: 90%;
+        height: 60%;
+        padding-bottom: 20px;
+        display: flex;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .firstFeatureTitleOne {
+        padding-left: 120px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .firstFeatureTitleTwo {
+        float: left;
+        margin-left: -240px;
+        padding: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+
+    /* three images for homepage */
+    .threeImageInformationOne {
+        width: 95%;
+        height: 95%;
+        margin-left: 20px;
+        margin-top: -20px;
+    }
+
+    .threeImageInformationTwo {
+        width: 93%;
+        height: 90%;
+        margin-left: 20px;
+        margin-top: 40px;
+        float: left;
+    }
+
+    .threeImageInformationThree {
+        width: 95%;
+        height: 85%;
+        margin-left: 10px;
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+
+    .SecondFeatureTitleOne {
+        margin-left: 160px;
+        padding-top: 30px;
+    }
+
+    .SecondFeatureTitleTwo {
+        margin-left: 200px;
+        padding-top: 30px;
+    }
+
+    .SecondFeatureTitleThree {
+        position: absolute;
+        margin-left: 170px;
+        margin-top: -80px;
+    }
+
+    /* Individual Product Description */
+    .productDescriptionImage {
+        width: 70%;
+        height: 70%;
+        margin-top: 10px;
+        margin-left: 70px;
+    }
+
+    .ProductTitleContainer {
+        margin-left: -25%;
+    }
+
+    .productTitle {
+        padding-top: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .productPrice2 {
+        margin-left: 12%;
+        margin-top: -5%
+    }    
+
+    .ProductDescriptionInfo {
+        margin-left: 10%;
+        margin-right: 8%;
+        margin-top: 5px;
+    }
+
+    .basketButton {
+        margin-top: 10px;
+        margin-left: 30%;
+        margin-bottom: 40px;
+
+    }
+
+    /* About page */
+    #EstablishedTitleContainer {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .AboutUsDescriptionContainer {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        padding-bottom: 10%;
+        font-size: 20%;
+    }
+
+    .AboutUsDescription {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #PropositionTitle {
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+
+    .UpArrowAbout {
+        margin-top: 10%;
+        left: -10%;
+    }
+
+    .footer {
+        padding: 5% 10%;
+    }
+
+    .logo {
+        width: 70%;
+        height: 70%;
+    }
+
+    #BannerSection {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #BannerSection h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 100%;
+    }
+
+    #categoriesTitle {
+        font-size: 100%;
+        font-weight: bold;
+        float: center;
+        text-align: center;
+        margin-top: 5%;
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+
+    #navigationBar {
+        float: right;
+        list-style: none;
+    }
+
+    #navigationBar li {
+        display: inline-block;
+        position: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: -50px;
+    }
+
+    #EstablishedTitleContainer {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .AboutUsDescriptionContainer {
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 5%;
+        padding-bottom: 15%;
+        font-size: 20%;
+    }
+
+    #PropositionTitle {
+        margin-top: 5%;
+        margin-bottom: 15%;
+    }
+
+
+    /* ArrowButton */
+    .UpArrowHome {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        margin-top: 5%;
+        margin-left: 85%;
+    }
+
+    .UpArrowContacts {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        margin-top: 15%;
+        margin-left: 85%;
+    }
+
+    .UpArrowAbout {
+        margin-top: 5%;
+    }
+
+    .footer {
+        padding: 5% 10%;
+    }
+
+    .SocialMediaLogoContainer {
+        flex-wrap: wrap;
+        margin-bottom: 5%;
+    }
+
+    .SocialMediaLogo {
+        height: 50%;
+        margin: 5px;
+    }
+
+    /* contact page  */
+    #locationInformation {
+        width: 50%;
+        margin-left: 135px;
+        margin-top: 40px;
+        float: none;
+        height: auto;
+        padding: 20px
+    }
+
+    #ContactNumberContainer {
+        margin-left: 135px;
+    }
+
+    #EmailContainer {
+        margin-left: 135px;
+        margin-top: 10%;
+    }
+
+
+    #ContactFormContainer {
+        align-self: center;
+        width: 100%;
+        height: 100%
+    }
+
+    .ContactFormInputs1 {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .ContactFormInputs {
+        width: 62%;
+        height: 70px;
+        margin-top: 5px;
+        margin-left: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        position: absolute;
+    }
+
+    #ContactHeadings1,
+    #ContactHeadings2 {
+        width: 200px;
+        margin-left: 0px;
+    }
+
+    #ContactHeadings3 {
+        position: relative;
+        margin-top: -5px;
+        margin-left: 5px;
+        width: 200px;
+    }
+
+    #SubmitButton {
+        width: 120px;
+        height: 45px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-left: 90px;
+        margin-top: 100px;
+    }
+
+    /* pay page  */
+    .paymentForm {
+        width: 100%;
+        height: 650px;
+        padding-top: 5px;
+    }
+
+    .paymentForm div {
+        margin-top: 20px;
+        margin-left: 100px;
+    }
+
+    .paymentForm input {
+        width: 60%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        margin-left: 100px;
+    }
+
+    .paymentForm button[type="submit"] {
+        margin-top: 5px;
+        margin-left: 200px;
+    }
+
+}

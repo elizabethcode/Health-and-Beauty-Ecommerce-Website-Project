@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Health & Beauty Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="Style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <a href="Home.html"><img src="Images/HealthfulCoreLogo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navigationBar">
+                <li><a href="Home.html">Home</a></li>
+                <li>
+                    <a href="Shop.html">Shop</a>
+                    <div class="dropdowncontainer">
+                        <ul class="dropdown">
+                            <li><a href="Shop.html#VitaminsAndSupplimentsSection">Vitamins and Suppliment</a></li>
+                            <li><a href="Shop.html#FoodAndDrinkSection">Food & Drink</a></li>
+                            <li><a href="Shop.html#SportNutritionSection">Sport Nutrition</a></li>
+                            <li><a href="Shop.html#BeautySection">Beauty</a></li>
+                            <li><a href="Shop.html#WellnessNeedsSection">Wellness Needs</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="active" href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><button id="signingOutButton" onclick="signOut()">Sign Out</button></li>
+                <li><a href="ShoppingCart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <header id="header2"> About Us</header>
+
+    <div id="EstablishedTitleContainer">
+        <header id="EstablishedTitle"> Established in 1997</header>
+    </div>
+
+    <div class="AboutUsDescriptionContainer">
+        <p class="AboutUsDescription">
+            Healthful Core is an international health and wellness store
+            that has opened more than 20 stores in Europe. We supply
+            customers with a wide range of products ranging from health
+            suppliments, vitamins, specialist foods and natural beauty
+            products. With over 30 years of experience in the health and
+            retail industry our brand has become more visible in different
+            market places in different countries such as China, India,
+            United States of America, Indonesia, Pakistan and Brazil.
+        </p>
+
+        <div id="PropositionTitleContainer">
+            <header id="PropositionTitle"> Our Proposition</header>
+        </div>
+
+        <p class="AboutUsDescription">
+            We sell a wide range of branded products as well as our own branded
+            products across all of these different categories. We also provide
+            sports nutrition products that are liecenced in the UK.
+        </p>
+    </div>
+
+    <a href="#navigationBar"><img src="Images/UpArrow.png" alt="Up Arrow" class="UpArrowAbout"></a>
+
+    <footer class="footer">
+        <div class="SocialMediaLogoContainer">
+            <img src="./Images/instagramLogo.png" class="SocialMediaLogo">
+            <img src="./Images/FacebookLogo.png" class="SocialMediaLogo">
+            <img src="./Images/TwitterLogo.png" class="SocialMediaLogo">
+        </div>
+        <div id="copyright">Healthful Core @ Copyright</div>
+    </footer>
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script> -->
+    <script src="Script1.js"></script>
+    <script src="Script2.js"></script>
+
+
+</body>
+
+</html>

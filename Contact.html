@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Health & Beauty Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="Style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <a href="Home.html"><img src="Images/HealthfulCoreLogo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navigationBar">
+                <li><a href="Home.html">Home</a></li>
+                <li>
+                    <a href="Shop.html">Shop</a>
+                    <div class="dropdowncontainer">
+                        <ul class="dropdown">
+                            <li><a href="Shop.html#VitaminsAndSupplimentsSection">Vitamins and Suppliment</a></li>
+                            <li><a href="Shop.html#FoodAndDrinkSection">Food & Drink</a></li>
+                            <li><a href="Shop.html#SportNutritionSection">Sport Nutrition</a></li>
+                            <li><a href="Shop.html#BeautySection">Beauty</a></li>
+                            <li><a href="Shop.html#WellnessNeedsSection">Wellness Needs</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="About.html">About</a></li>
+                <li><a class="active" href="Contact.html">Contact</a></li>
+                <li><button id="signingOutButton">Sign Out</button></li>
+                <li><a href="ShoppingCart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <header id="header2">Get in Touch</header>
+    
+    <div id="contactContainer">
+        <div id="locationInformation">
+            <div id="LocationTitle">Location</div><br>
+            <p class="Address">73 Cambridge Rd, <br> Hull, <br> United Kingdom, <br> HU13 9DF</p> <br><br>
+            <p class="Address">1172 Atha Drive, <br> Bakersfield, <br> California, <br> 93307</p>
+        </div>
+
+        <div id="ContactNumberContainer">
+            <h1 class="ContactNumberTitle">Phone</h1><br>
+            <p>United Kingdom Number</p>
+            <p class="ContactNumber1">7700 900 492</p><br>
+            <p>United State Number</p>
+            <p class="ContactNumber1"> 117 496 0502</p><br>
+        </div>
+
+        <div id="EmailContainer">
+            <h1 class="emailTitle">Email</h1><br>
+            <p class="email">healthful.core@gmail.com</p>
+        </div>
+    </div>
+
+    <div id="ContactFormContainer">
+        <div id="ContactForm">
+            <div class="contactFormTitle">Contact Form</div>
+            <div id="ContactHeadings1">Full Name</div>
+            <input class="ContactFormInputs1" id="FullNameInput" type="text">
+
+            <div id="ContactHeadings2">Email</div>
+            <input class="ContactFormInputs1" id="EmailAddressInput" type="text">
+
+            <div id="ContactHeadings3">Message</div>            
+            <input class="ContactFormInputs" id="MessageInput" type="text">
+
+            <button id="SubmitButton" onclick="InputtingDataToDatabase()">Submit</button>
+        </div>
+    </div>
+
+    <script type="module">
+        // Import the functions from firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+
+        // My web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDRxXLWHei5LTGIr_-6eCaL_owAgz_QkOE",
+            authDomain: "ecommercewebsiteproject-5f283.firebaseapp.com",
+            databaseURL: "https://ecommercewebsiteproject-5f283-default-rtdb.firebaseio.com",
+            projectId: "ecommercewebsiteproject-5f283",
+            storageBucket: "ecommercewebsiteproject-5f283.appspot.com",
+            messagingSenderId: "527330989842",
+            appId: "1:527330989842:web:d7df7f447a3ad56e1145cb"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        import { getDatabase, set, get, update, remove, ref, child }
+            from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js"
+
+        const db = getDatabase();
+
+        var FullNameInput = document.querySelector("#FullNameInput");
+        var EmailAddressInput = document.querySelector("#EmailAddressInput");
+        var MessageInput = document.querySelector("#MessageInput");
+        var SubmitButton = document.querySelector("#SubmitButton");
+
+        //Grabbing all of the data from the inputs and then inserting it in the database
+        //it will display the alert message once successfully inserted int he database
+        function InputtingDataToDatabase() {
+            set(ref(db, "ContactForm/Customers/" + FullNameInput.value), {
+                FullName: FullNameInput.value,
+                EmailAddress: EmailAddressInput.value,
+                Message: MessageInput.value
+            })
+                .then(() => {
+                    alert("Thank you for contacting us. We will get in touch soon.")
+                    // clear input boxes
+                    FullNameInput.value = "";
+                    EmailAddressInput.value = "";
+                    MessageInput.value = "";
+                })
+                .catch((errorMessage) => {
+                    alert(errorMessage)
+                });
+
+        }
+
+        //when button is clicked it will run the function
+        SubmitButton.addEventListener('click', InputtingDataToDatabase)
+
+    </script>
+
+    <a href="#navigationBar"><img src="Images/UpArrow.png" class="UpArrowContacts"></a>
+
+    <div class="ContactfooterContainer">
+        <footer class="footer">
+            <div class="SocialMediaLogoContainer">
+                <a href="https://www.instagram.com"><img src="./Images/instagramLogo.png" class="SocialMediaLogo"></a>
+                <a href="https://en-gb.facebook.com"><img src="./Images/FacebookLogo.png" class="SocialMediaLogo"></a>
+                <a href="https://twitter.com/?lang=en"><img src="./Images/TwitterLogo.png" class="SocialMediaLogo"></a>
+            </div>
+            <div id="copyright">Healthful Core @ Copyright</div>
+        </footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+    <script src="Script1.js"></script>
+    <script src="Script2.js"></script>
+
+</body>
+
+</html>

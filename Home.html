@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Health & Beauty Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+</head>
+
+
+
+<div id="header">
+    <a href="Home.html"><img src="Images/HealthfulCoreLogo.png" class="logo" alt=""></a>
+    <ul id="navigationBar">
+        <li><a class="active" href="Home.html">Home</a></li>
+        <li>
+            <a href="Shop.html">Shop</a>
+            <div class="dropdowncontainer">
+                <ul class="dropdown">
+                    <li><a href="Shop.html#VitaminsAndSupplimentsSection">Vitamins and Suppliment</a></li>
+                    <li><a href="Shop.html#FoodAndDrinkSection">Food & Drink</a></li>
+                    <li><a href="Shop.html#SportNutritionSection">Sport Nutrition</a></li>
+                    <li><a href="Shop.html#BeautySection">Beauty</a></li>
+                    <li><a href="Shop.html#WellnessNeedsSection">Wellness Needs</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><button id="signingOutButton" onclick="signOut()">Sign Out</button></li>
+        <li><a href="ShoppingCart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+    </ul>
+</div>
+
+<div id="BannerSection">
+    <h1>Welcome <br> to <br>Healthful <br> Core</h1>
+</div>
+
+<div id="categoriesTitle">
+    <h2>Categories</h2>
+</div>
+
+
+<div id="firstFeature">
+    <a href="Shop.html#VitaminsAndSupplimentsSection"><img src="Images/VitaminsPicture.png"
+            class="twoImageInformationOne"></a>
+
+    <div class="firstFeatureTitleContainer1">
+        <p class="firstFeatureTitleOne"><a href="Shop.html#VitaminsAndSupplimentsSection">Vitamins & Suppliments</a></p>
+    </div>
+
+    <a href="Shop.html#FoodAndDrinkSection"><img src="Images/FoodAndDrinkImage.jpg" class="twoImageInformationTwo"></a>
+
+    <div class="firstFeatureTitleContainer2">
+        <p class="firstFeatureTitleTwo"><a href="Shop.html#FoodAndDrinkSection">Food & Drink</a></p>
+    </div>
+</div>
+
+<div id="SecondFeature">
+
+    <a href="Shop.html#SportNutritionSection"><img src="Images/SportNutritionImage.png"
+            class="threeImageInformationOne"></a>
+
+    <div class="SecondFeatureTitleContainer1">
+        <p class="SecondFeatureTitleOne"><a href="Shop.html#SportNutritionSection">Sport Nutrition</a></p>
+    </div>
+
+    <a href="Shop.html#BeautySection"><img src="Images/BeautyImages.png" class="threeImageInformationTwo"></a>
+    
+    <div class="secondFeatureTitleContainer2">
+        <p class="SecondFeatureTitleTwo"><a href="Shop.html#BeautySection">Beauty</a></p>
+    </div>
+
+    <a href="Shop.html#WellnessNeedsSection"><img src="Images/WellnessNeedsImages.png"
+            class="threeImageInformationThree"></a>
+
+    <div class="secondFeatureTitleContainer2">
+        <p class="SecondFeatureTitleThree"><a href="Shop.html#WellnessNeedsSection">Wellness Needs</a></p>
+
+    </div>
+</div>
+
+<a href="#navigationBar"><img src="Images/UpArrow.png" alt="Up Arrow" class="UpArrowHome"></a>
+
+<div class="footerContainer">
+    <footer class="footer" id="homeFooter">
+        <div class="SocialMediaLogoContainer">
+            <a href="https://www.instagram.com"><img src="./Images/instagramLogo.png" class="SocialMediaLogo"></a>
+            <a href="https://en-gb.facebook.com"><img src="./Images/FacebookLogo.png" class="SocialMediaLogo"></a>
+            <a href="https://twitter.com/?lang=en"><img src="./Images/TwitterLogo.png" class="SocialMediaLogo"></a>
+        </div>
+        <div id="copyright">Healthful Core @ Copyright</div>
+    </footer>
+</div>
+
+<script src="Script1.js"></script>
+
+</body>
+
+</html>
